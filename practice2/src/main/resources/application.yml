@@ -1,0 +1,28 @@
+
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+
+jwt:
+  header: Authorization
+  secret: VlwEyVBsYt9V7zq57TejMnVUyzblYcfPQye08f7MGVA9XkHa
+  token-validity-in-seconds: 86400
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace # 파라미터의 로그를 찍어줌
+server:
+  port: 8081
